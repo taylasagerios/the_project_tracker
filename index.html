@@ -18,42 +18,35 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
 <body>
-    <header class="hero jumbotron d-flex flex-column">
+    <header class="p-5 mb-4 text-center header">
         <h1 class=""> The Project Tracker </h1>
-        <h2>Welcome to Project Tracking</h2>
-       <div class="today" id="today"></div>
-
+        <h2>Current Time & Date: <span id="time-display"></span></h2>
     </header>
-   <main class="main-container">
-    <div class="card" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">Instructions</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#openProjectWindow">Add Project</button>
-      </div>
-    </div>
-      <div class="modal" id="openProjectWindow" tabindex="-1">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Modal title</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <p>Modal body text goes here.</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
+   <main class="container-fluid">
+    <div class="row">
+      <div class="col-md col-xl-4">
+        <div class="card mb-3">
+          <h2 class="h4 card-header custom-card-header">Instructions</h2>
+          <div class="card-body">
+            <p class="card-text">
+              This is a simple project tracker. You can add projects and tasks
+              to each project. You can also edit and delete projects and tasks.
+            </p>
+          </div>
+          <ul class="list-grouo list-group-flush">
+            <li class="list-group-item">Project Name</li>
+            <li class="list-group-item">Project Type</li>
+            <li class="list-group-item">Due Date</li>
+          </ul>
+          <div class="card-footer">
+            <button class="btn btn-block btn-custom w-100" data-bs-toggle="modal" data-bs-taret="#new-project-modal">Add Project</button>
           </div>
         </div>
       </div>
-
-
-    <div class="capture"></div>
-
-    <div class="projects"></div>
+      <div class="col-md col-xl-8">
+        
+      </div>
+    </div>
    </main>
  <script src="assets/script.js"></script>   
 </body>
